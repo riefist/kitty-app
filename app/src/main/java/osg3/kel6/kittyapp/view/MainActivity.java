@@ -8,6 +8,8 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import osg3.kel6.kittyapp.R;
+import osg3.kel6.kittyapp.data.remote.ApiClient;
+import osg3.kel6.kittyapp.data.remote.ApiInterface;
 
 import android.view.View;
 import android.view.Menu;
