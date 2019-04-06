@@ -1,21 +1,17 @@
 package osg3.kel6.kittyapp.view;
 
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import osg3.kel6.kittyapp.R;
-import osg3.kel6.kittyapp.data.remote.ApiClient;
-import osg3.kel6.kittyapp.data.remote.ApiInterface;
-
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
+import osg3.kel6.kittyapp.R;
+
 public class MainActivity extends AppCompatActivity {
+
+    private RecyclerView recKitty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,15 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        recKitty = findViewById(R.id.recyclerKitty);
     }
 
     @Override
